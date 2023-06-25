@@ -7,22 +7,48 @@ namespace Managers
 {
 	public class ResourceManager : MonoBehaviourSingleton<ResourceManager>
 	{
-		public int money;
-		public int ironSalt;
-		public int basketOfGoods;
-		public int CableNetworks;
-		public int PRToolbox;
+		public float money;
+		public float rawResources;
+		public float ironSalt;
+		public float basketOfGoods;
+		public float CableNetworks;
+		public float PRToolbox;
 
-		public void AddMoney(int value)
+		private void Start()
+		{
+			money = 100000;
+		}
+
+		public void AddMoney(float value)
 		{
 			money += value;
 		}
 
-		public bool RemoveMoney(int value)
+		public bool RemoveMoney(float value)
 		{
 			if (money >= value)
 			{
 				money -= value;
+				return true;
+			}
+			return false;
+		}
+		
+		public bool RemoveRawResources(float value)
+		{
+			if (rawResources >= value)
+			{
+				rawResources -= value;
+				return true;
+			}
+			return false;
+		}
+
+		public bool RemoveIronSalt(float value)
+		{
+			if (ironSalt >= value)
+			{
+				ironSalt -= value;
 				return true;
 			}
 			return false;

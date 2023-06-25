@@ -7,10 +7,11 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 
-namespace Characters
+namespace Units
 {
-	public class Character : MonoBehaviour
+	public class Unit : MonoBehaviour
 	{
+		public Hexagon hexagon;
 
 
 	}

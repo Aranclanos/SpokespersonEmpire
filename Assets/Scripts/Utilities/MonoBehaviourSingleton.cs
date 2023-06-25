@@ -15,7 +15,7 @@ namespace Utilities
 			{
 				instance = this as T;
 				transform.SetParent(null);
-				DontDestroyOnLoad(gameObject);
+				//DontDestroyOnLoad(gameObject);
 			}
 			else
 			{
